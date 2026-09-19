@@ -1,814 +1,894 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Everything by Wealth | Footwear, Electronics & Home Appliances</title>
+    <title>Everything by Wealth | Footwear, Electronics & Home Appliances</title>
 
-  <meta
-    name="description"
-    content="Everything by Wealth in Udu, Delta State. Shop men's footwear, Belgium stabilizers, gas cookers, electric ovens, irons and hotcombs."
-  >
+    <meta
+        name="description"
+        content="Everything by Wealth — quality men's footwear, electronics and home appliances in Udu, Delta State, Nigeria."
+    >
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    html {
-      scroll-behavior: smooth;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fa;
-      color: #172033;
-      line-height: 1.6;
-    }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f7f5;
+            color: #1f2937;
+            line-height: 1.6;
+        }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+        a {
+            text-decoration: none;
+        }
 
-    img {
-      display: block;
-      width: 100%;
-    }
+        /* NAVIGATION */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #111827;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 7%;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+        }
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: #111827;
-      padding: 16px 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
-    }
+        .logo {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
 
-    .logo {
-      color: white;
-      font-size: 22px;
-      font-weight: 800;
-    }
+        .logo span {
+            color: #d4af37;
+        }
 
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      list-style: none;
-    }
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
 
-    .nav-links a {
-      color: white;
-      font-size: 15px;
-      font-weight: 600;
-      transition: 0.3s;
-    }
+        .nav-links a {
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
 
-    .nav-links a:hover {
-      color: #60a5fa;
-    }
+        .nav-links a:hover {
+            color: #d4af37;
+        }
 
-    .hero {
-      min-height: 78vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 6%;
-      background:
-        linear-gradient(
-          rgba(15, 23, 42, 0.84),
-          rgba(15, 23, 42, 0.84)
-        ),
-        url("https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/9ce48468365529.60d4c7e73538d.jpg")
-        center/cover no-repeat;
-      color: white;
-    }
+        /* HERO */
+        .hero {
+            min-height: 78vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 70px 20px;
+            background:
+                linear-gradient(rgba(17, 24, 39, 0.72), rgba(17, 24, 39, 0.72)),
+                url("https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/9ce48468365529.60d4c7e73538d.jpg")
+                center/cover no-repeat;
+        }
 
-    .hero-content {
-      max-width: 800px;
-    }
+        .hero-content {
+            max-width: 850px;
+            color: white;
+        }
 
-    .hero h1 {
-      font-size: clamp(42px, 7vw, 72px);
-      line-height: 1.05;
-      margin-bottom: 22px;
-    }
+        .hero-tag {
+            display: inline-block;
+            color: #d4af37;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
 
-    .hero h1 span {
-      color: #60a5fa;
-    }
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1.05;
+            margin-bottom: 24px;
+        }
 
-    .hero p {
-      font-size: clamp(18px, 2.5vw, 22px);
-      color: #e5e7eb;
-      max-width: 680px;
-      margin: 0 auto 32px;
-    }
+        .hero h1 span {
+            color: #d4af37;
+        }
 
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
+        .hero p {
+            max-width: 680px;
+            margin: 0 auto 32px;
+            font-size: 19px;
+            color: #e5e7eb;
+        }
 
-    .btn {
-      display: inline-block;
-      padding: 15px 25px;
-      border-radius: 10px;
-      font-weight: 700;
-      transition: 0.3s;
-    }
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
 
-    .btn-primary {
-      background: #2563eb;
-      color: white;
-    }
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-    .btn-primary:hover {
-      background: #1d4ed8;
-      transform: translateY(-2px);
-    }
+        .btn-primary {
+            background: #d4af37;
+            color: #111827;
+        }
 
-    .btn-light {
-      background: white;
-      color: #111827;
-    }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: #e5c45c;
+        }
 
-    .btn-light:hover {
-      background: #e5e7eb;
-      transform: translateY(-2px);
-    }
+        .btn-secondary {
+            border: 1px solid #ffffff;
+            color: #ffffff;
+        }
 
-    section {
-      padding: 80px 6%;
-    }
+        .btn-secondary:hover {
+            background: #ffffff;
+            color: #111827;
+        }
 
-    .section-heading {
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto 45px;
-    }
+        /* GENERAL SECTIONS */
+        section {
+            padding: 80px 7%;
+        }
 
-    .section-heading h2 {
-      font-size: clamp(30px, 5vw, 42px);
-      margin-bottom: 12px;
-      color: #111827;
-    }
+        .section-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 45px;
+        }
 
-    .section-heading p {
-      color: #667085;
-      font-size: 17px;
-    }
+        .section-heading span {
+            color: #b08b18;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
 
-    .products {
-      background: #ffffff;
-    }
+        .section-heading h2 {
+            font-size: 38px;
+            margin: 10px 0 15px;
+            color: #111827;
+        }
 
-    .product-grid {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
+        .section-heading p {
+            color: #6b7280;
+            font-size: 17px;
+        }
 
-    .product-card {
-      display: block;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.07);
-      transition: 0.3s;
-      cursor: pointer;
-    }
+        /* PRODUCTS */
+        #products {
+            background: #ffffff;
+        }
 
-    .product-card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.13);
-      border-color: #93c5fd;
-    }
+        .product-grid {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
 
-    .product-image-wrap {
-      height: 230px;
-      overflow: hidden;
-      background: #f3f4f6;
-    }
+        .product-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            transition: 0.3s ease;
+        }
 
-    .product-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.11);
+        }
 
-    .product-card:hover .product-image {
-      transform: scale(1.05);
-    }
+        .product-image-wrap {
+            height: 235px;
+            background: #f3f4f6;
+            overflow: hidden;
+        }
 
-    .product-content {
-      padding: 24px;
-    }
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
 
-    .product-content h3 {
-      font-size: 22px;
-      margin-bottom: 9px;
-      color: #111827;
-    }
+        .product-content {
+            padding: 22px;
+        }
 
-    .product-content p {
-      color: #667085;
-      margin-bottom: 17px;
-    }
+        .product-content h3 {
+            color: #111827;
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
 
-    .whatsapp-link {
-      color: #15803d;
-      font-weight: 800;
-    }
+        .product-content p {
+            color: #6b7280;
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
 
-    .about {
-      background: #f5f7fa;
-    }
+        .product-button {
+            display: block;
+            text-align: center;
+            background: #111827;
+            color: #ffffff;
+            padding: 12px 15px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-    .about-container {
-      max-width: 1000px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 35px;
-    }
+        .product-button:hover {
+            background: #d4af37;
+            color: #111827;
+        }
 
-    .about-card {
-      background: white;
-      padding: 32px;
-      border-radius: 18px;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
-    }
+        /* ABOUT */
+        .about-section {
+            background: #f7f7f5;
+        }
 
-    .about-card h3 {
-      margin-bottom: 14px;
-      color: #111827;
-      font-size: 24px;
-    }
+        .about-container {
+            max-width: 1050px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            align-items: center;
+        }
 
-    .about-card p {
-      color: #667085;
-      font-size: 17px;
-    }
+        .about-text h2 {
+            color: #111827;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
 
-    .contact {
-      background: #111827;
-      color: white;
-    }
+        .about-text p {
+            color: #4b5563;
+            font-size: 17px;
+            margin-bottom: 18px;
+        }
 
-    .contact .section-heading h2 {
-      color: white;
-    }
+        .about-box {
+            background: #111827;
+            color: white;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
 
-    .contact .section-heading p {
-      color: #cbd5e1;
-    }
+        .about-box h3 {
+            color: #d4af37;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
 
-    .contact-grid {
-      max-width: 1050px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+        .about-box p {
+            color: #e5e7eb;
+        }
 
-    .contact-card {
-      background: #1f2937;
-      padding: 28px;
-      border-radius: 16px;
-      text-align: center;
-      border: 1px solid #374151;
-    }
+        /* CONTACT */
+        #contact {
+            background: #ffffff;
+        }
 
-    .contact-card h3 {
-      margin-bottom: 9px;
-      font-size: 20px;
-    }
+        .contact-container {
+            max-width: 1050px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+        }
 
-    .contact-card p,
-    .contact-card a {
-      color: #d1d5db;
-    }
+        .contact-card {
+            background: #f7f7f5;
+            padding: 30px;
+            border-radius: 14px;
+            border: 1px solid #e5e7eb;
+        }
 
-    .contact-card a:hover {
-      color: #60a5fa;
-    }
+        .contact-card h3 {
+            font-size: 23px;
+            color: #111827;
+            margin-bottom: 20px;
+        }
 
-    .whatsapp-button {
-      display: inline-block;
-      margin-top: 12px;
-      background: #16a34a;
-      color: white !important;
-      padding: 12px 18px;
-      border-radius: 8px;
-      font-weight: 700;
-    }
+        .contact-item {
+            margin-bottom: 18px;
+        }
 
-    .whatsapp-button:hover {
-      background: #15803d;
-    }
+        .contact-item strong {
+            display: block;
+            color: #111827;
+            margin-bottom: 3px;
+        }
 
-    footer {
-      background: #0b1120;
-      color: #9ca3af;
-      text-align: center;
-      padding: 25px 6%;
-      font-size: 14px;
-    }
+        .contact-item a,
+        .contact-item span {
+            color: #4b5563;
+        }
 
-    @media (max-width: 900px) {
-      .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+        .contact-item a:hover {
+            color: #b08b18;
+        }
 
-      .contact-grid {
-        grid-template-columns: 1fr;
-        max-width: 600px;
-      }
-    }
+        .contact-cta {
+            background: #111827;
+            color: #ffffff;
+            padding: 30px;
+            border-radius: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-    @media (max-width: 700px) {
-      nav {
-        flex-direction: column;
-        gap: 12px;
-      }
+        .contact-cta h3 {
+            color: #d4af37;
+            font-size: 27px;
+            margin-bottom: 12px;
+        }
 
-      .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+        .contact-cta p {
+            color: #e5e7eb;
+            margin-bottom: 22px;
+        }
 
-      .hero {
-        min-height: 72vh;
-        padding: 65px 5%;
-      }
+        .whatsapp-button {
+            display: inline-block;
+            width: fit-content;
+            background: #25d366;
+            color: #ffffff;
+            padding: 14px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-      section {
-        padding: 65px 5%;
-      }
+        .whatsapp-button:hover {
+            transform: translateY(-2px);
+        }
 
-      .product-grid,
-      .about-container {
-        grid-template-columns: 1fr;
-      }
+        /* FOOTER */
+        footer {
+            background: #0b1120;
+            color: #9ca3af;
+            text-align: center;
+            padding: 30px 20px;
+        }
 
-      .product-image-wrap {
-        height: 240px;
-      }
-    }
-  </style>
+        footer .footer-logo {
+            color: #ffffff;
+            font-size: 21px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        footer .footer-logo span {
+            color: #d4af37;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 850px) {
+
+            nav {
+                padding: 16px 5%;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 17px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 70vh;
+                padding: 60px 20px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 65px 5%;
+            }
+
+            .section-heading h2 {
+                font-size: 32px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .hero h1 {
+                font-size: 44px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hero-buttons .btn {
+                text-align: center;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-image-wrap {
+                height: 250px;
+            }
+
+            .about-text h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
-
-  <nav>
-    <a href="#home" class="logo">Everything by Wealth</a>
-
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-
-  <!-- HERO -->
-
-  <header class="hero" id="home">
-
-    <div class="hero-content">
-
-      <h1>
-        Everything You Need,
-        <span>All in One Place.</span>
-      </h1>
-
-      <p>
-        Shop quality men's footwear, used imported electronics
-        and home appliances from Everything by Wealth in Udu,
-        Delta State, Nigeria.
-      </p>
-
-      <div class="hero-buttons">
-
-        <a
-          class="btn btn-primary"
-          href="https://wa.me/2349027026024?text=Hello%20Everything%20by%20Wealth%2C%20I%27d%20like%20to%20make%20an%20enquiry."
-          target="_blank"
-          rel="noopener"
-        >
-          Chat on WhatsApp
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#home" class="logo">
+            Everything <span>by Wealth</span>
         </a>
 
-        <a class="btn btn-light" href="#products">
-          View Products
-        </a>
-
-      </div>
-
-    </div>
-
-  </header>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
 
-  <!-- PRODUCTS -->
+    <!-- HERO -->
+    <header class="hero" id="home">
+        <div class="hero-content">
 
-  <section class="products" id="products">
+            <div class="hero-tag">
+                Quality • Convenience • Value
+            </div>
 
-    <div class="section-heading">
+            <h1>
+                Everything You Need,
+                <span>All in One Place.</span>
+            </h1>
 
-      <h2>Our Products</h2>
+            <p>
+                Shop quality men's footwear, electronics and home appliances
+                from Everything by Wealth in Udu, Delta State.
+            </p>
 
-      <p>
-        Tap any product to enquire directly on WhatsApp.
-      </p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">
+                    Explore Products
+                </a>
 
-    </div>
+                <a
+                    href="https://wa.me/2349027026024?text=Hello%20Everything%20by%20Wealth%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+                    class="btn btn-secondary"
+                    target="_blank"
+                >
+                    Chat on WhatsApp
+                </a>
+            </div>
+
+        </div>
+    </header>
 
 
-    <div class="product-grid">
+    <!-- PRODUCTS -->
+    <section id="products">
+
+        <div class="section-heading">
+            <span>Our Collection</span>
+
+            <h2>Shop Our Products</h2>
+
+            <p>
+                Browse our range of footwear, electronics and useful home
+                appliances. Tap a product to make an enquiry on WhatsApp.
+            </p>
+        </div>
 
 
-      <!-- MEN'S FOOTWEAR -->
+        <div class="product-grid">
 
-      <a
-        class="product-card"
-        href="https://wa.me/2349027026024?text=Hello%20Everything%20by%20Wealth%2C%20I%E2%80%99m%20interested%20in%20Men%E2%80%99s%20Footwear.%20Please%20share%20more%20details."
-        target="_blank"
-        rel="noopener"
-      >
+            <!-- MEN'S FOOTWEAR -->
+            <div class="product-card">
 
-        <div class="product-image-wrap">
+                <div class="product-image-wrap">
+                    <img
+                        class="product-image"
+                        src="https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/9ce48468365529.60d4c7e73538d.jpg"
+                        alt="Men's Footwear"
+                        loading="lazy"
+                    >
+                </div>
 
-          <img
-            class="product-image"
-            src="https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/9ce48468365529.60d4c7e73538d.jpg"
-            alt="Men's Footwear"
-            loading="lazy"
-          >
+                <div class="product-content">
+                    <h3>Men's Footwear</h3>
+
+                    <p>
+                        Stylish footwear options for different occasions.
+                    </p>
+
+                    <a
+                        class="product-button"
+                        href="https://wa.me/2349027026024?text=Hello%20Everything%20by%20Wealth%2C%20I%27m%20interested%20in%20your%20Men%27s%20Footwear."
+                        target="_blank"
+                    >
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- BELGIUM STABILIZERS -->
+            <div class="product-card">
+
+                <div class="product-image-wrap">
+                    <img
+                        class="product-image"
+                        src="https://s1.cel.ro/images/mari/2022/12/15/stabilizator-de-tensiune-cu-relee-braun-group-1000va600w-ec-avr-1000va-f.jpg"
+                        alt="Belgium Stabilizer"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="product-content">
+                    <h3>Belgium Stabilizers</h3>
+
+                    <p>
+                        Reliable voltage stabilizers for home and electronic appliances.
+                    </p>
+
+                    <a
+                        class="product-button"
+                        href="https://wa.me/2349027026024?text=Hello%20Everything%20by%20Wealth%2C%20I%27m%20interested%20in%20your%20Belgium%20Stabilizers."
+                        target="_blank"
+                    >
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- GAS COOKERS -->
+            <div class="product-card">
+
+                <div class="product-image-wrap">
+                    <img
+                        class="product-image"
+                        src="https://alabamart.com/cdn/shop/files/Untitled-design-1.jpg?v=1704607529"
+                        alt="Gas Cooker"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="product-content">
+                    <h3>Gas Cookers</h3>
+
+                    <p>
+                        Practical cooking solutions for modern homes.
+                    </p>
+
+                    <a
+                        class="product-button"
+                        href="https://wa.me/2349027026024?text=Hello%20Everything%20by%20Wealth%2C%20I%27m%20interested%20in%20your%20Gas%20Cookers."
+                        target="_blank"
+                    >
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- ELECTRIC OVENS -->
+            <div class="product-card">
+
+                <div class="product-image-wrap">
+                    <img
+                        class="product-image"
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Forno_elettrico_2.jpg"
+                        alt="Electric Oven"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="product-content">
+                    <h3>Electric Ovens</h3>
+
+                    <p>
+                        Convenient ovens for everyday cooking and baking.
+                    </p>
+
+                    <a
+                        class="product-button"
+                        href="https://wa.me/2349027026024?text=Hello%20Everything%20by%20Wealth%2C%20I%27m%20interested%20in%20your%20Electric%20Ovens."
+                        target="_blank"
+                    >
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- IRONS -->
+            <div class="product-card">
+
+                <div class="product-image-wrap">
+                    <img
+                        class="product-image"
+                        src="https://www.premierkitchen.in/wp-content/uploads/2021/03/Emerald-Steam-Iron-Box-1.jpg"
+                        alt="Electric Iron"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="product-content">
+                    <h3>Irons</h3>
+
+                    <p>
+                        Everyday ironing appliances for home use.
+                    </p>
+
+                    <a
+                        class="product-button"
+                        href="https://wa.me/2349027026024?text=Hello%20Everything%20by%20Wealth%2C%20I%27m%20interested%20in%20your%20Irons."
+                        target="_blank"
+                    >
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- HOTCOMBS -->
+            <div class="product-card">
+
+                <div class="product-image-wrap">
+                    <img
+                        class="product-image"
+                        src="https://i5.walmartimages.com/asr/07992cdd-5ecd-4fac-bbbc-c37a31b1eb05.46e625512b36906afa9c94a8be34642b.jpeg?odnBg=FFFFFF&odnHeight=580&odnWidth=580"
+                        alt="Hotcomb"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="product-content">
+                    <h3>Hotcombs</h3>
+
+                    <p>
+                        Hair styling appliances for convenient everyday use.
+                    </p>
+
+                    <a
+                        class="product-button"
+                        href="https://wa.me/2349027026024?text=Hello%20Everything%20by%20Wealth%2C%20I%27m%20interested%20in%20your%20Hotcombs."
+                        target="_blank"
+                    >
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+
+            </div>
 
         </div>
 
-        <div class="product-content">
-
-          <h3>Men's Footwear</h3>
-
-          <p>
-            Stylish men's shoes for different occasions
-            and everyday wear.
-          </p>
-
-          <span class="whatsapp-link">
-            Enquire on WhatsApp →
-          </span>
-
-        </div>
-
-      </a>
+    </section>
 
 
-      <!-- BELGIUM STABILIZERS -->
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
 
-      <a
-        class="product-card"
-        href="https://wa.me/2349027026024?text=Hello%20Everything%20by%20Wealth%2C%20I%E2%80%99m%20interested%20in%20Belgium%20Stabilizers.%20Please%20share%20more%20details."
-        target="_blank"
-        rel="noopener"
-      >
+        <div class="about-container">
 
-        <div class="product-image-wrap">
+            <div class="about-text">
 
-          <img
-            class="product-image"
-            src="https://s1.cel.ro/images/mari/2022/12/15/stabilizator-de-tensiune-cu-relee-braun-group-1000va600w-ec-avr-1000va-f.jpg"
-            alt="Belgium Stabilizer"
-            loading="lazy"
-          >
+                <span style="color:#b08b18;font-size:13px;font-weight:bold;letter-spacing:2px;">
+                    ABOUT US
+                </span>
 
-        </div>
+                <h2>
+                    Quality Products.
+                    Everyday Value.
+                </h2>
 
-        <div class="product-content">
+                <p>
+                    Everything by Wealth is a business based in Udu,
+                    Delta State, Nigeria, offering a selection of men's
+                    footwear, electronics and home appliances.
+                </p>
 
-          <h3>Belgium Stabilizers</h3>
+                <p>
+                    Our goal is to make it convenient for customers to
+                    discover useful products and contact us directly for
+                    enquiries and purchases.
+                </p>
 
-          <p>
-            Voltage stabilizers for helping protect
-            household electronics.
-          </p>
+            </div>
 
-          <span class="whatsapp-link">
-            Enquire on WhatsApp →
-          </span>
+
+            <div class="about-box">
+
+                <h3>
+                    Everything by Wealth
+                </h3>
+
+                <p>
+                    From stylish footwear to useful home appliances,
+                    we're bringing everyday products together in one place.
+                </p>
+
+            </div>
 
         </div>
 
-      </a>
+    </section>
 
 
-      <!-- GAS COOKERS -->
+    <!-- CONTACT -->
+    <section id="contact">
 
-      <a
-        class="product-card"
-        href="https://wa.me/2349027026024?text=Hello%20Everything%20by%20Wealth%2C%20I%E2%80%99m%20interested%20in%20Gas%20Cookers.%20Please%20share%20more%20details."
-        target="_blank"
-        rel="noopener"
-      >
+        <div class="section-heading">
 
-        <div class="product-image-wrap">
+            <span>Get In Touch</span>
 
-          <img
-            class="product-image"
-            src="https://alabamart.com/cdn/shop/files/Untitled-design-1.jpg?v=1704607529"
-            alt="Gas Cooker"
-            loading="lazy"
-          >
+            <h2>We're Here to Help</h2>
+
+            <p>
+                Have a question about a product? Contact Everything by Wealth
+                directly.
+            </p>
 
         </div>
 
-        <div class="product-content">
 
-          <h3>Gas Cookers</h3>
+        <div class="contact-container">
 
-          <p>
-            Practical cooking solutions for homes
-            and everyday use.
-          </p>
+            <div class="contact-card">
 
-          <span class="whatsapp-link">
-            Enquire on WhatsApp →
-          </span>
+                <h3>Business Information</h3>
 
-        </div>
+                <div class="contact-item">
+                    <strong>Location</strong>
+                    <span>Udu, Delta State, Nigeria</span>
+                </div>
 
-      </a>
+                <div class="contact-item">
+                    <strong>Phone</strong>
+                    <a href="tel:09125662686">
+                        09125662686
+                    </a>
+                </div>
 
+                <div class="contact-item">
+                    <strong>WhatsApp</strong>
+                    <a
+                        href="https://wa.me/2349027026024"
+                        target="_blank"
+                    >
+                        09027026024
+                    </a>
+                </div>
 
-      <!-- ELECTRIC OVENS -->
+                <div class="contact-item">
+                    <strong>Opening Hours</strong>
+                    <span>Every day: 7:00 AM – 10:00 PM</span>
+                </div>
 
-      <a
-        class="product-card"
-        href="https://wa.me/2349027026024?text=Hello%20Everything%20by%20Wealth%2C%20I%E2%80%99m%20interested%20in%20Electric%20Ovens.%20Please%20share%20more%20details."
-        target="_blank"
-        rel="noopener"
-      >
-
-        <div class="product-image-wrap">
-
-          <img
-            class="product-image"
-            src="https://www.kerong.com/uploadfiles/20250327161106870.jpg"
-            alt="Electric Oven"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-content">
-
-          <h3>Electric Ovens</h3>
-
-          <p>
-            Convenient electric ovens for baking,
-            roasting and cooking.
-          </p>
-
-          <span class="whatsapp-link">
-            Enquire on WhatsApp →
-          </span>
-
-        </div>
-
-      </a>
+            </div>
 
 
-      <!-- IRONS -->
+            <div class="contact-cta">
 
-      <a
-        class="product-card"
-        href="https://wa.me/2349027026024?text=Hello%20Everything%20by%20Wealth%2C%20I%E2%80%99m%20interested%20in%20Irons.%20Please%20share%20more%20details."
-        target="_blank"
-        rel="noopener"
-      >
+                <h3>
+                    Ready to make an enquiry?
+                </h3>
 
-        <div class="product-image-wrap">
+                <p>
+                    Send us a message on WhatsApp and let us know
+                    what product you're interested in.
+                </p>
 
-          <img
-            class="product-image"
-            src="https://www.premierkitchen.in/wp-content/uploads/2021/03/Emerald-Steam-Iron-Box-1.jpg"
-            alt="Electric Iron"
-            loading="lazy"
-          >
+                <a
+                    class="whatsapp-button"
+                    href="https://wa.me/2349027026024?text=Hello%20Everything%20by%20Wealth%2C%20I%20found%20your%20website%20and%20I%27d%20like%20to%20make%20an%20enquiry."
+                    target="_blank"
+                >
+                    Chat on WhatsApp
+                </a>
+
+            </div>
 
         </div>
 
-        <div class="product-content">
+    </section>
 
-          <h3>Irons</h3>
 
-          <p>
-            Household irons for keeping clothes
-            neat and presentable.
-          </p>
+    <!-- FOOTER -->
+    <footer>
 
-          <span class="whatsapp-link">
-            Enquire on WhatsApp →
-          </span>
-
+        <div class="footer-logo">
+            Everything <span>by Wealth</span>
         </div>
-
-      </a>
-
-
-      <!-- HOTCOMBS -->
-
-      <a
-        class="product-card"
-        href="https://wa.me/2349027026024?text=Hello%20Everything%20by%20Wealth%2C%20I%E2%80%99m%20interested%20in%20Hotcombs.%20Please%20share%20more%20details."
-        target="_blank"
-        rel="noopener"
-      >
-
-        <div class="product-image-wrap">
-
-          <img
-            class="product-image"
-            src="https://i5.walmartimages.com/asr/07992cdd-5ecd-4fac-bbbc-c37a31b1eb05.46e625512b36906afa9c94a8be34642b.jpeg?odnBg=FFFFFF&odnHeight=580&odnWidth=580"
-            alt="Hotcomb"
-            loading="lazy"
-          >
-
-        </div>
-
-        <div class="product-content">
-
-          <h3>Hotcombs</h3>
-
-          <p>
-            Hair styling hotcombs for everyday
-            grooming and styling.
-          </p>
-
-          <span class="whatsapp-link">
-            Enquire on WhatsApp →
-          </span>
-
-        </div>
-
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- ABOUT -->
-
-  <section class="about" id="about">
-
-    <div class="section-heading">
-
-      <h2>About Everything by Wealth</h2>
-
-      <p>
-        Your convenient destination for footwear,
-        electronics and home appliances.
-      </p>
-
-    </div>
-
-
-    <div class="about-container">
-
-      <div class="about-card">
-
-        <h3>What We Offer</h3>
 
         <p>
-          Everything by Wealth sells men's footwear,
-          used imported electronics and home appliances.
-          Our product range includes men's shoes,
-          Belgium stabilizers, gas cookers, electric ovens,
-          irons and hotcombs.
+            Quality footwear, electronics & home appliances.
         </p>
 
-      </div>
-
-
-      <div class="about-card">
-
-        <h3>Our Location</h3>
-
-        <p>
-          We are located in Udu, Delta State, Nigeria.
-          For product availability, prices and enquiries,
-          contact us directly through WhatsApp or phone.
+        <p style="margin-top:8px;">
+            © 2026 Everything by Wealth. All rights reserved.
         </p>
 
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-
-  <section class="contact" id="contact">
-
-    <div class="section-heading">
-
-      <h2>Contact Us</h2>
-
-      <p>
-        Have a question about a product?
-        We're happy to help.
-      </p>
-
-    </div>
-
-
-    <div class="contact-grid">
-
-
-      <div class="contact-card">
-
-        <h3>Phone</h3>
-
-        <p>
-          <a href="tel:09125662686">
-            09125662686
-          </a>
-        </p>
-
-      </div>
-
-
-      <div class="contact-card">
-
-        <h3>WhatsApp</h3>
-
-        <p>
-          09027026024
-        </p>
-
-        <a
-          class="whatsapp-button"
-          href="https://wa.me/2349027026024?text=Hello%20Everything%20by%20Wealth%2C%20I%27d%20like%20to%20make%20an%20enquiry."
-          target="_blank"
-          rel="noopener"
-        >
-          Chat on WhatsApp
-        </a>
-
-      </div>
-
-
-      <div class="contact-card">
-
-        <h3>Location</h3>
-
-        <p>
-          Udu, Delta State, Nigeria
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <p>
-      © 2026 Everything by Wealth. All rights reserved.
-    </p>
-
-    <p>
-      Udu, Delta State, Nigeria
-    </p>
-
-  </footer>
+    </footer>
 
 </body>
 </html>
